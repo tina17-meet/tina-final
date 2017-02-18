@@ -1,4 +1,4 @@
-from flask import *
+from flask import Flask, render_template
 from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, Float
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, sessionmaker
@@ -8,14 +8,11 @@ from werkzeug.utils import secure_filename
 import locale, os
 
 app = Flask(__name__)
-
 Base = declarative_base()
 engine = create_engine('sqlite:///fizzBuzz.db')
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine, autoflush=False)
 session = DBSession()
-
-
 @app.route('/')
 def homepage():
 	return render_template('home.html')
@@ -27,10 +24,6 @@ def biographies():
 @app.route('/facts')
 def facts():
 	return render_template('facts.html')
-
-@app.route('/teams')
-def teams():
-	return render_template('teams.html')
 
 @app.route('/aboutme')
 def aboutme():

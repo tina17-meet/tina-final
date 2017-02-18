@@ -1,17 +1,14 @@
+{% extends "layout.html" %}
+ {% block body %}
 <!DOCTYPE html>
 <html>
 <head>
 	<title>welcome babies</title>
 </head>
-<body>
-{% block body %}
+<body style="background-color:wheat;">
 <center> 
-<h1>basketball never stops</h1>
-<p> <a href="{{url_for('biographies')}}"> biographies</a>
-<a href="{{url_for('facts')}}"> facts</a>
-<a href="{{url_for('teams')}}">teams and games</a>
-</p>
-<img src="http://www.funchap.com/wp-content/uploads/2015/08/life-style-basketball-2015.jpg",  width="500", height="600"></center> 
-{%endblock%}
+<h1 style="color:black;">Basketball Never Stops</h1>
+<img src="http://1.bp.blogspot.com/-K5V-Wjsl_jA/UbIgSixEvMI/AAAAAAAAABk/Wc8y0EQxLN8/w1200-h630-p-k-nu/il_fullxfull_364667424_c869.jpg",  width="500", height="500"></center> 
 </body>
 </html>  
+{%endblock%}
